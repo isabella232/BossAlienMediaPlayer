@@ -57,6 +57,6 @@ echo Build hash is $BUILD_HASH
 inject_value "BUILD_HASH $BUILD_HASH" $DIR/docker/mopidy.conf
 
 (cd $DIR && \
-	docker-compose -f $DIR/docker/docker-compose.yml up --build && \
+	docker-compose -f $DIR/docker/docker-compose.yml -p bamp_dev up --build && \
 	cd -)
 

@@ -4,6 +4,7 @@ import { QueuedItemMetadata } from '../queued-item-metadata.interface';
 import { QueueService } from '../queue.service';
 import { AuthService } from '../auth.service';
 import { SpotifyService as SpotifyService } from '../spotify.service';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'bamp-voting',
@@ -14,6 +15,7 @@ export class VotingComponent implements OnInit {
 
   @Input() Metadata: QueuedItemMetadata;
   @Input() Track: Track;
+  @Input() Source: string;
   
   public CanShowRemoveTrack : boolean;
 
@@ -86,4 +88,11 @@ export class VotingComponent implements OnInit {
     this.queueService.resumeQueueUpdating();
   }
 
+  copySongToImage() : void {
+    //html2canvas(document.querySelector("#nowplaying")).then(canvas => {
+      //document.body.appendChild(canvas)
+    //  this.clipboard.writeText("AAAA");
+      // TODO: Put image in top modal div so users can copy the image and then remove it if clicking out of image or after 10 seconds
+    //});
+  }
 }

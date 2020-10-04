@@ -14,6 +14,8 @@ const showSongDuration: string = "showSongDuration";
 export class NowplayingComponent implements OnInit {
 
   public timeDisplayMode: string = showSongDuration;
+  public votingSource : string = 'nowplaying';
+
   constructor(public queueService : QueueService, public httpService: HttpService) { }
 
   ngOnInit() {

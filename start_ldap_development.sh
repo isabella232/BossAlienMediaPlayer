@@ -9,4 +9,4 @@ echo Use the following settings in mopidy.conf.secrets:
 echo "LDAP_URI ldap://host.docker.internal:389"
 echo "LDAP_SCHEMA CN=#USER_NAME#,DC=example,DC=org"
 
-docker-compose -f ./docker/ldap-docker-compose.yml up
+docker-compose -f ./docker/ldap-docker-compose.yml -p bamp_ldap up
